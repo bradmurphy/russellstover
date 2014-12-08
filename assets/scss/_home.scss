@@ -1,0 +1,160 @@
+.hero {
+	float: left;
+	position: relative;
+	background: url(../img/bg-hero-mobile.jpg) no-repeat;
+	background-position: 100% 0;
+	background-size: cover;
+	width: 100%;
+	height: 248px;
+	cursor: pointer;
+	padding: 10px 10px;
+	@include box-sizing(border-box);
+	@include mq(android) {
+		height: 372px;
+	}
+	@include mq(tablet) {
+		background: url(../img/bg-hero.jpg) no-repeat;
+		background-size: cover;
+		height: 512px;
+		cursor: default;
+	}
+	@include mq(laptop) {
+		width: 75%;
+		height: 374px;
+		background-size: cover;
+	}
+	@include mq(laptop) {
+		height: 480px;
+	}
+	@include mq(desktop) {
+		height: 640px;
+	}
+}
+
+.favorite {
+	float: left;
+	background: url(../img/bg-find-favorite-mobile.jpg) no-repeat;
+	background-size: contain;
+	background-position: 100% 0;
+	width: 100%;
+	height: 472px;
+	cursor: pointer;
+	@include transition(all .3s ease-in-out);
+	&:hover > div.navy-left {
+		background: $navy;
+		&:before {
+			border-top-color: $navy;
+			border-bottom-color: $navy;
+		}
+	}
+	@include mq(android) {
+		height: 709px;
+		background-size: cover;
+	}
+	@include mq(tablet) {
+		height: 975px;
+	}
+	@include mq(laptop) {
+		&:hover > div.navy-left {
+			background: $crimson;
+			&:before {
+				border-top-color: $crimson;
+				border-bottom-color: $crimson;
+			}
+		}
+		background: url(../img/bg-find-favorite.jpg) no-repeat;
+		background-size: cover;
+		width: 25%;
+		height: 480px;
+		&:hover {
+			background: url(../img/bg-find-favorite-hover.jpg) no-repeat;
+			background-size: cover;
+		}
+	}
+	@include mq(desktop) {
+		height: 640px;
+	}
+}
+
+.pairing {
+	float: left;
+	background: url(../img/bg-pairings-mobile.jpg) no-repeat;
+	background-size: cover;
+	width: 100%;
+	height: 198px;
+	cursor: pointer;
+	@include transition(all .3s ease-in-out);
+	@include mq(android) {
+		height: 296px;
+	}
+	@include mq(tablet) {
+		background: url(../img/bg-pairings.jpg) no-repeat;
+		background-size: contain;
+		height: 256px;
+		&:hover {
+			background: url(../img/bg-pairings-hover.jpg) no-repeat;
+			background-size: contain;
+		}
+	}
+	@include mq(laptop) {
+		width: 75%;
+		height: 240px;
+	}
+	@include mq(desktop) {
+		height: 320px;
+	}
+}
+
+.personalize {
+	float: left;
+	width: 100%;
+	height: auto;
+	background: $crimson;
+	display: table;
+	height: 320px;
+	cursor: pointer;
+	@include transition(all .3s ease-in-out);
+	&:hover > div span {
+		color: $crimson;
+		@include transition(all .3s ease-in-out);
+		&.cl-span {
+			background: $crimson;
+			color: $crimson-light;
+			border-top: 1px solid $crimson-light;
+			border-bottom: 1px solid $crimson-light;
+			@include transition(all .3s ease-in-out);
+		}
+	}
+	&:hover {
+		@include transition(all .3s ease-in-out);
+		background: url(../img/patterns/salty.png);
+	}
+	div {
+		display: table-cell;
+		vertical-align: middle;
+		text-align: center;
+		span {
+			float: left;
+			text-transform: uppercase;
+			color: $crimson-light;
+			width: 100%;
+			font-size: 1.5em;
+			padding: 5px 0;
+			font-weight: 600;
+			&.cl-span {
+				font-size: 1.75em;
+				background: $crimson-light;
+				color: $crimson;
+				border-top: 1px solid $crimson;
+				border-bottom: 1px solid $crimson;
+			}
+		}
+	}
+	@include mq(laptop) {
+		width: 25%;
+		height: 240px;
+	}
+	@include mq(desktop) {
+		height: 320px;
+	}
+}

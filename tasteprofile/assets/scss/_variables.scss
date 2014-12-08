@@ -1,0 +1,45 @@
+// MEDIA QUERY MIXIN
+@mixin mq($point) {
+	@if $point == desktop {
+		@media (min-width: 1280px) { @content; }
+	}
+	@if $point == laptop {
+		@media (min-width: 960px) { @content; }
+	}
+	@else if $point == tablet {
+		@media (min-width: 768px) { @content; }
+	}
+	@else if $point == android {
+		@media (min-width: 480px)  { @content; }
+	}
+	@else if $point == iphone {
+		@media (min-width: 320px)  { @content; }
+	}
+}
+
+// COlORS
+$intro-purple: #b03776;
+$intro-yellow: #dda625;
+$pink-text: #e57c92;
+$sweet-text: #bce6be;
+$spicy-text: #b5dfd0;
+$salty-text: #3e768e;
+$pink: #ef677e;
+$hover-pink: #ef506b;
+$green: #81c78b;
+$hover-green: #5cc66b;
+$purple: #91516e;
+$hover-purple: #933d64;
+$puke: #b5c85f;
+$hover-puke: #a5c41a;
+$orange: #dd634e;
+$hover-orange: #dd4f36;
+$teal: #69a394;
+$hover-teal: #41a38a;
+$yellow: #dbae47;
+$hover-yellow: #dba425;
+$blue: #608ba4;
+$hover-blue: #4a758e;
+$charcoal: #333;
+$cream: #EAEAEA;
+$white: #fff;

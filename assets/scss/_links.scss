@@ -1,0 +1,161 @@
+// LINK MIXIN
+@mixin link($color) {
+	color: $color;
+	font-size: 1em;
+	text-decoration: none;
+	position: relative;
+	display: inline-block;
+	padding-bottom: 4px;
+	&:after {
+		bottom: 0;
+		content: "";
+		display: block;
+		left: 50%;
+		height: 2px;
+		position: absolute;
+		background: $color;
+		@include transition(all .3s ease-in-out);
+		width: 0;
+	}
+	&:hover:after {
+		width: 100%;
+		left: 0;
+	}
+}
+
+a.link {
+	@include link($white);
+	text-transform: capitalize;
+	font-weight: 500;
+}
+
+// RIBBON MIXIN
+@mixin ribbon-left($width, $height, $bg, $align, $hover, $border, $color, $margin) {
+	position: relative;
+	width: $width;
+	height: $height; 
+	padding: 10px 20px;
+	background: $bg;
+	font-size: 1.25em;
+	font-weight: 500;
+	text-align: $align;
+	text-decoration: none;
+	cursor: pointer;
+	@include box-sizing(border-box);
+	@include transition(all .3s ease-in-out);
+	&:hover {
+		background: $hover;
+	}
+	&:hover:before {
+		border-top: $border solid $hover;
+		border-bottom: $border solid $hover;
+	}
+	&:before {
+		content: "";
+		position: absolute;
+		top: 0;
+		right: -25px;
+		width: 0;
+		height: 0;
+		border-right: 25px solid transparent;
+		border-top: $border solid $bg;
+		border-bottom: $border solid $bg;
+		@include transition(all .3s ease-in-out);
+	}
+	a {
+		text-decoration: none;
+		font-weight: 600;
+		color: $color;
+		display: block;
+		margin-top: $margin;
+	}
+}
+
+@mixin ribbon-right($width, $height, $bg, $align, $hover, $border, $color, $margin) {
+	position: relative;
+	width: $width;
+	height: $height; 
+	padding: 10px 20px;
+	background: $bg;
+	font-size: 1.25em;
+	font-weight: 500;
+	text-align: $align;
+	text-decoration: none;
+	cursor: pointer;
+	@include box-sizing(border-box);
+	@include transition(all .3s ease-in-out);
+	&:hover {
+		background: $hover;
+	}
+	&:hover:before {
+		border-top: $border solid $hover;
+		border-bottom: $border solid $hover;
+	}
+	&:before {
+		content: "";
+		position: absolute;
+		top: 0;
+		left: -25px;
+		width: 0;
+		height: 0;
+		border-left: 25px solid transparent;
+		border-top: $border solid $bg;
+		border-bottom: $border solid $bg;
+		@include transition(all .3s ease-in-out);
+	}
+	a {
+		text-decoration: none;
+		font-weight: 600;
+		color: $color;
+		display: block;
+		margin-top: $margin;
+	}
+}
+
+.navy-left {
+	@include ribbon-left(190px, 70px, $navy, center, $crimson, 35px, $white, -4px);
+	left: 50%;
+	bottom: -80%;
+	margin-left: -110px; // Offset for :before tag
+	@include mq(tablet) {
+		bottom: -89%;
+	}
+	@include mq(laptop) {
+		bottom: -80%;
+	}
+	@include mq(desktop) {
+		bottom: -85%;
+	}
+}
+
+.navy-right {
+	display: none;
+	@include ribbon-right(185px, 70px, $navy, center, $crimson, 35px, $white, 0px);
+	a {
+		font-size: 1.5em;
+	}
+	@include mq(tablet) {
+		float: right;
+		display: block;
+		bottom: -80%;
+		margin: 0 10px;
+	}
+	@include mq(laptop) {
+		bottom: -80%;
+	}
+	@include mq(desktop) {
+		bottom: -85%;
+	}
+}
+
+.crimson-left {
+	@include ribbon-left(250px, 50px, $crimson, left, $navy, 25px, $white, 0px);
+}
+
+.crimson-right {
+	@include ribbon-right(250px, 50px, $crimson, right, $navy, 25px, $white, 0px);
+	&.cart-button {
+		float: right;
+		margin-top: 35px;
+	}
+}

@@ -1,0 +1,257 @@
+.full-height {
+	float: left;
+	width: 100%;
+	height: 480px;
+	min-height: 100%;
+	@include mq(tablet) {
+		height: 768px;
+		min-height: 100%;
+	}
+	@include mq(laptop) {
+		min-height: 100%;
+	}
+	.pager-wrap {
+		display: none;
+		@include mq(tablet) {
+			position: absolute;
+			display: block;
+			width: 100%;
+			height: 80px;
+			bottom: 0;
+			z-index: 99999;
+			.pager {
+				position: relative;
+				width: 340px;
+				margin-left: -170px;
+				left: 50%;
+				height: auto;
+				padding: 10px 10px;
+				@include box-sizing(border-box);
+				.circle {
+					float: left;
+					background: rgba($white, 0.5);
+					border-radius: 50%;
+					cursor: pointer;
+					display: block;
+					width: 18px;
+					height: 18px;
+					margin: 7px 7px;
+					z-index: 99999;
+					@include transition(all .3s ease-in-out);
+					&:hover {
+						background: $white;
+					}
+				}
+			}
+		}
+	}
+}
+
+#answer-0 .pager .circle {
+	&:nth-child(1) {
+		background: $white;
+	}
+}
+
+#answer-1 .pager .circle {
+	&:nth-child(2) {
+		background: $white;
+	}
+}
+
+#answer-2 .pager .circle {
+	&:nth-child(3) {
+		background: $white;
+	}
+}
+
+#answer-3 .pager .circle {
+	&:nth-child(4) {
+		background: $white;
+	}
+}
+
+#answer-4 .pager .circle {
+	&:nth-child(5) {
+		background: $white;
+	}
+}
+
+#answer-5 .pager .circle {
+	&:nth-child(6) {
+		background: $white;
+	}
+}
+
+#answer-6 .pager .circle {
+	&:nth-child(7) {
+		background: $white;
+	}
+}
+
+#answer-7 .pager .circle {
+	&:nth-child(8) {
+		background: $white;
+	}
+}
+
+#answer-8 .pager .circle {
+	&:nth-child(9) {
+		background: $white;
+	}
+}
+
+#answer-9 .pager .circle {
+	&:nth-child(10) {
+		background: $white;
+	}
+}
+
+.answer-wrap {
+	float: left;
+	width: 100%;
+	min-height: 160px;
+	height: 33.333333333%;
+	display: table;
+	@include transition(all .3s ease-in-out);
+	@include mq(laptop) {
+		width: 33.3333333333333%;
+		height: 100%;
+	}
+	div.answer {
+		display: table-cell;
+		vertical-align: middle;
+		text-align: center;
+		cursor: pointer;
+		padding: 0 20px;
+		@include box-sizing(border-box);
+		@include mq(laptop) {
+			padding: 0 25px;
+			float: none;
+			text-align: left;
+		}
+		span {
+			float: left;
+			width: 100%;
+			color: rgba($white, 0.5);
+			font-size: 2em;
+			line-height: 1em;
+			font-weight: 700;
+			@include transition(all .3s ease-in-out);
+			@include mq(laptop) {
+				font-size: 4em;
+				width: 73%;
+			}
+			@include mq(desktop) {
+				font-size: 6em;
+				width: 360px;
+			}
+		}
+	}
+}
+
+section.questions {
+	float: left;
+	position: relative;
+	width: 100%;
+	height: 100%;
+	min-height: 480px;
+	@include mq(tablet) {
+		min-height: 768px;
+	}
+	&:nth-child(1) {
+		background: $pink;
+		.answer-wrap:hover {
+			background: $hover-pink;
+			span {
+				color: $white;
+			}
+		}
+	}
+	&:nth-child(2) {
+		background: $green;
+		.answer-wrap:hover {
+			background: $hover-green;
+			span {
+				color: $white;
+			}
+		}
+	}
+	&:nth-child(3) {
+		background: $purple;
+		.answer-wrap:hover {
+			background: $hover-purple;
+			span {
+				color: $white;
+			}
+		}
+	}
+	&:nth-child(4) {
+		background: $puke;
+		.answer-wrap:hover {
+			background: $hover-puke;
+			span {
+				color: $white;
+			}
+		}
+	}
+	&:nth-child(5) {
+		background: $orange;
+		.answer-wrap:hover {
+			background: $hover-orange;
+			span {
+				color: $white;
+			}
+		}
+	}
+	&:nth-child(6) {
+		background: $teal;
+		.answer-wrap:hover {
+			background: $hover-teal;
+			span {
+				color: $white;
+			}
+		}
+	}
+	&:nth-child(7) {
+		background: $yellow;
+		.answer-wrap:hover {
+			background: $hover-yellow;
+			span {
+				color: $white;
+			}
+		}
+	}
+	&:nth-child(8) {
+		background: $blue;
+		.answer-wrap:nth-child(3) .answer span {
+			@include mq(desktop) {
+				width: 364px;
+			}
+		}
+		.answer-wrap:hover {
+			background: $hover-blue;
+			span {
+				color: $white;
+			}
+		}
+	}
+	&:nth-child(9) {
+		background: $pink;
+		.answer-wrap:hover {
+			background: $hover-pink;
+			span {
+				color: $white;
+			}
+		}
+	}
+	&:nth-child(10) {
+		background: $green;
+		.answer-wrap:hover {
+			background: $hover-green;
+			span {
+				color: $white;
+			}
+		}
+	}
+}

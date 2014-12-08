@@ -1,0 +1,47 @@
+// MEDIA QUERY MIXIN
+@mixin mq($point) {
+	@if $point == desktop {
+		@media (min-width: 1280px) { @content; }
+	}
+	@if $point == laptop {
+		@media (min-width: 960px) { @content; }
+	}
+	@else if $point == tablet {
+		@media (min-width: 768px) { @content; }
+	}
+	@else if $point == chocolate {
+		@media (min-width: 609px) { @content; }
+	}
+	@else if $point == android {
+		@media (min-width: 480px)  { @content; }
+	}
+	@else if $point == iphone {
+		@media (min-width: 320px)  { @content; }
+	}
+}
+
+// COlORS
+$black: #000;
+$white: #fff;
+$crimson: #6e0c21;
+$crimson-light: #ad383f;
+$navy: #132e3d;
+$blue: #2f576b;
+$blue-light: #497690;
+$orange: #e77b68;
+$pink: #f47c91;
+$purple: #af6e8c;
+$yellow: #e6bc5c;
+$maroon: #924959;
+$teal: #8fb9b0;
+$orange: #df4f36;
+$light-blue: #6bc1d4;
+$puke: #b3a757;
+$dark-purple: #933d64;
+$light-purple: #a5a9ed;
+$light-yellow: #ffd696;
+$dark-yellow: #dda625;
+$bright-yellow: #febc1f;
+$light-navy: #034a60;
+$hot-pink: #c94599;
+$light-green: #c6d479;

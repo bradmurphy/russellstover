@@ -1,0 +1,368 @@
+// FONTS
+$omnes: 'omnes-pro',sans-serif;
+
+// VARIABLES
+$sans-serif: $omnes;
+$base-font-family: $sans-serif;
+$header-font-family: $base-font-family;
+
+// SIZES
+$base-font-size: 1em;
+$base-line-height: $base-font-size * 1.5;
+// Strip units from line-height: https://developer.mozilla.org/en-US/docs/Web/CSS/line-height#Prefer_unitless_numbers_for_line-height_values
+$unitless-line-height: $base-line-height / ($base-line-height * 0 + 1);
+$header-line-height: $base-font-size * 1.25;
+$base-border-radius: em(3);
+$base-vertical-spacing: 0.5em;
+
+$h1-font-size: $base-font-size * 4;
+$h2-font-size: $base-font-size * 2;
+$h3-font-size: $base-font-size * 1.75;
+$h4-font-size: $base-font-size * 1.5;
+$h5-font-size: $base-font-size * 1.25;
+$h6-font-size: $base-font-size;
+
+body {
+  -webkit-font-smoothing: antialiased;
+  color: $black;
+  font-family: $base-font-family;
+  font-size: $base-font-size;
+  line-height: $unitless-line-height;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: $sans-serif;
+  line-height: $header-line-height;
+  margin: 0;
+  text-rendering: optimizeLegibility; // Fix the character spacing for headings
+}
+
+h1 {
+  font-size: $h1-font-size;
+}
+
+h2 {
+  font-size: $h2-font-size;
+  &.product-name {
+    float: left;
+    color: $crimson;
+    width: 100%;
+    text-align: center;
+    padding: 10px 10px;
+    @include box-sizing(border-box);
+    @include mq(tablet) {
+      width: 50%;
+      font-size: 3.5em;
+      text-align: right;
+    }
+    @include mq(laptop) {
+      font-size: 3.75em;
+    }
+    @include mq(desktop) {
+      font-size: 4em;
+    }
+    &.align-left {
+      @include mq(tablet) {
+        text-align: left;
+        width: 100%;
+      }
+    }
+  }
+  &.main-heading {
+    float: left;
+    color: $orange;
+    padding: 10px 10px;
+    @include box-sizing(border-box);
+    @include mq(tablet) {
+      font-size: 3.5em;
+    }
+    @include mq(laptop) {
+      font-size: 3.75em;
+    }
+    @include mq(desktop) {
+      font-size: 4em;
+    }
+  }
+}
+
+h3 {
+  font-size: 1.5em;
+  &.modal-header {
+    text-align: center;
+    text-transform: capitalize;
+    font-weight: 400;
+    margin: 10px 0 0 0;
+    @include mq(tablet) {
+      font-size: $h3-font-size;
+    }
+    @include mq(laptop) {
+      font-size: 2.5em;
+    }
+  }
+}
+
+h4 {
+  font-size: $h4-font-size;
+}
+
+h5 {
+  font-size: $h5-font-size;
+  color: $white;
+  padding: 10px 25px;
+  font-size: 1.75em;
+  font-weight: 600;
+  text-transform: uppercase;
+  font-style: italic;
+  text-align: center;
+  @include mq(tablet) {
+    text-align: left;
+  }
+}
+
+h6 {
+  position: relative;
+  font-size: 1.25em;
+  line-height: 1em;
+  color: $white;
+  z-index: 2;
+  @include mq(android) {
+    font-size: 1.5em;
+  }
+  @include mq(tablet) {
+    font-size: 1.75em;
+  }
+  @include mq(laptop) {
+    font-size: 2em;
+  }
+  @include mq(desktop) {
+    font-size: 2.5em;
+  }
+  &.feature {
+    font-size: 2em;
+    color: $yellow;
+    @include mq(android) {
+      font-size: 2.5em;
+    }
+    @include mq(laptop) {
+      font-size: 3em;
+    }
+    @include mq(desktop) {
+      font-size: 3.75em;
+    }
+  }
+  &.assorted {
+    font-size: 2em;
+    color: $white;
+    @include mq(android) {
+      font-size: 2.5em;
+    }
+    @include mq(laptop) {
+      font-size: 3em;
+    }
+    @include mq(desktop) {
+      font-size: 3.75em;
+    }
+  }
+}
+
+p {
+  position: relative;
+  text-align: left;
+  font-size: 0.85em;
+  font-weight: 500;
+  color: $white;
+  margin: 0 0 ($base-line-height * .5) 0;
+  z-index: 2;
+  &.h-align {
+    display: none;
+    position: absolute;
+    right: 0;
+    width: 50%;
+    padding: 0 20px;
+    text-align: right;
+    @include box-sizing(border-box);
+    @include mq(tablet) {
+      display: inline-block;
+      font-size: 1.5em;
+      bottom: 30%;
+    }
+    @include mq(laptop) {
+      width: 60%;
+      font-size: 1.75em;
+      bottom: 20%;
+    }
+    @include mq(desktop) {
+      font-size: 2em;
+      bottom: 30%;
+    }
+  }
+  &.feature {
+    color: $navy;
+    width: 80%;
+    margin-top: 125px;
+    @include mq(tablet) {
+      width: 50%;
+      margin-top: 40px;
+    }
+    @include mq(laptop) {
+      width: 40%;
+      margin-top: 70px;
+    }
+    @include mq(desktop) {
+      width: 35%;
+      margin-top: 180px;
+    }
+  }
+  &.assorted {
+    color: $white;
+  }
+  &.product-text {
+    float: left;
+    color: $crimson;
+    text-align: left;
+    width: 100%;
+    padding: 10px 10px;
+    @include box-sizing(border-box);
+    @include mq(tablet) {
+      float: right;
+      text-align: right;
+      width: 50%;
+    }
+    @include mq(desktop) {
+      width: 44.5%;
+    }
+    &.align-left {
+      @include mq(tablet) {
+        float: left;
+        text-align: left;
+      }
+    }
+  }
+  @include mq(tablet) {
+    font-size: $base-font-size;
+  }
+  @include mq(laptop) {
+    font-size: 1.15em;
+  }
+  @include mq(desktop) {
+    font-size: 1.25em;
+  }
+}
+
+span.store-name {
+  float: left;
+  color: $black;
+  font-weight: 500;
+  text-align: left;
+  font-size: 1.5em;
+  font-weight: 600;
+  padding: 10px 10px;
+  clear: left;
+  @include box-sizing(border-box);
+  @include mq(tablet) {
+    font-size: 1.75em;
+  }
+  @include mq(laptop) {
+    font-size: 2em;
+  }
+  @include mq(desktop) {
+    font-size: 2.25em;
+  }
+}
+
+address {
+  float: left;
+  clear: left;
+  font-size: 0.85em;
+  font-style: normal;
+  font-weight: 500;
+  padding: 10px 10px;
+  margin: 0 0 ($base-line-height * .5) 0;
+  @include box-sizing(border-box);
+  @include mq(tablet) {
+    font-size: $base-font-size;
+  }
+  @include mq(laptop) {
+    font-size: 1.25em;
+  }
+  @include mq(desktop) {
+    font-size: 1.5em;
+  }
+}
+
+.cart-name {
+  float: left;
+  width: 100%;
+  height: 50%;
+  font-weight: 500;
+  background: $yellow;
+  color: $white;
+  text-transform: uppercase;
+  display: table;
+  span {
+    padding: 0 10px;
+    @include box-sizing(border-box);
+    display: table-cell;
+    vertical-align: middle;
+  }
+  @include mq(tablet) {
+    font-size: $base-font-size;
+  }
+  @include mq(laptop) {
+    font-size: 1.15em;
+  }
+  @include mq(desktop) {
+    font-size: 1.25em;
+  }
+}
+
+.cart-size {
+  float: left;
+  width: 100%;
+  height: 50%;
+  color: $navy;
+  font-weight: 500;
+  text-transform: uppercase;
+  display: table;
+  span {
+    padding: 0 10px;
+    @include box-sizing(border-box);
+    display: table-cell;
+    vertical-align: middle;
+  }
+  @include mq(tablet) {
+    font-size: $base-font-size;
+  }
+  @include mq(laptop) {
+    font-size: 1.15em;
+  }
+  @include mq(desktop) {
+    font-size: 1.25em;
+  }
+}
+
+span.price {
+  float: left;
+  width: 40%;
+  color: $navy;
+  font-weight: 500;
+  text-align: right;
+  font-size: 1.15em;
+  font-weight: 600;
+  text-transform: uppercase;
+  @include box-sizing(border-box);
+  @include mq(tablet) {
+    font-size: 1.5em;
+  }
+  @include mq(laptop) {
+    font-size: 1.75em;
+  }
+  @include mq(desktop) {
+    font-size: 2em;
+  }
+  &.name {
+    float: left;
+    width: 60%;
+    text-align: left;
+  }
+}

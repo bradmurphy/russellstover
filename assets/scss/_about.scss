@@ -1,0 +1,559 @@
+.about-slide {
+	float: left;
+	position: relative;
+	background: $white;
+	width: 100%;
+	height: 480px;
+	min-height: 100%;
+	@include mq(tablet) {
+		height: 768px;
+		min-height: 100%;
+	}
+	@include mq(laptop) {
+		min-height: 100%;
+	}
+	a {
+		position: absolute;
+		color: $black;
+		bottom: 5%;
+		right: 5%;
+		text-decoration: none;
+		&:hover {
+			text-decoration: underline;
+		}
+	}
+	.box-top {
+		position: absolute;
+		top: 0;
+		width: 100%;
+		height: 11.19791666666667%;
+		display: table;
+		&.crimson {
+			background: $crimson
+		}
+		&.pink {
+			background: $pink;
+		}
+		&.blue {
+			background: $light-blue;
+		}
+		&.puke {
+			background: $puke;
+		}
+		&.purple {
+			background: $dark-purple;
+		}
+		&.teal {
+			background: $teal;
+		}
+		&.orange {
+			background: $orange;
+		}
+		&.light-purple {
+			background: $light-purple;
+		}
+		&.navy {
+			background: $navy;
+		}
+		&.light-yellow {
+			background: $light-yellow;
+		}
+		&.yellow {
+			background: $dark-yellow;
+		}
+		&.bright-yellow {
+			background: $bright-yellow;
+		}
+		&.light-navy {
+			background: $light-navy;
+		}
+		&.hot-pink {
+			background: $hot-pink;
+		}
+		&.light-green {
+			background: $light-green;
+		}
+	}
+	.box-bottom {
+		position: absolute;
+		bottom: 0;
+		width: 100%;
+		height: 11.19791666666667%;
+		display: table;
+		&.crimson {
+			background: $crimson
+		}
+		&.pink {
+			background: $pink;
+		}
+		&.blue {
+			background: $light-blue;
+		}
+		&.puke {
+			background: $puke;
+		}
+		&.purple {
+			background: $dark-purple;
+		}
+		&.teal {
+			background: $teal;
+		}
+		&.orange {
+			background: $orange;
+		}
+		&.light-purple {
+			background: $light-purple;
+		}
+		&.navy {
+			background: $navy;
+		}
+		&.light-yellow {
+			background: $light-yellow;
+		}
+		&.yellow {
+			background: $dark-yellow;
+		}
+		&.bright-yellow {
+			background: $bright-yellow;
+		}
+		&.light-navy {
+			background: $light-navy;
+		}
+		&.hot-pink {
+			background: $hot-pink;
+		}
+		&.light-green {
+			background: $light-green;
+		}
+	}
+}
+
+.about-content {
+	position: absolute;
+	width: 100%;
+	top: 11.19791666666667%;
+	height: 77.60416666666666%;
+}
+
+.table {
+	float: left;
+	width: 100%;
+	height: 100%;
+	display: table;
+}
+
+.v-align {
+	display: table-cell;
+	vertical-align: middle;
+	a.about-arrow {
+		position: relative;
+		left: 50%;
+		margin-left: -31px;
+	}
+}
+
+.max-width {
+	max-width: 100%;
+}
+
+.about-logo {
+	float: left;
+	clear: right;
+	@include mq(android) {
+		position: relative;
+		width: 407px;
+		left: 50%;
+		margin-left: -203px;
+	}
+}
+
+.slide1 {
+	@include mq(tablet) {
+		height: 600px;
+	}
+}
+
+.slide1-text {
+	float: right;
+	position: relative;
+	margin-top: 15px;
+	clear: both;
+	@include mq(tablet) {
+		margin-top: 0;
+		bottom: -85px;
+	}
+}
+
+.custom-box {
+	float: left;
+	width: 48%;
+	display: none;
+	@include mq(tablet) {
+		display: block;
+	}
+	@include mq(desktop) {
+		width: 42%;
+	}
+}
+
+.slide2-text {
+	float: right;
+	width: 100%;
+	@include mq(tablet) {
+		margin-top: 5%;
+		width: 48%;
+	}
+	@include mq(desktop) {
+		margin-top: 6%;
+		width: auto;
+	}
+}
+
+.slide3-text {
+	float: left;
+	@include mq(tablet) {
+		width: auto;
+		margin-left: 24px;
+	}
+	@include mq(lapotop) {
+		margin-left: 120px;
+	}
+	@include mq(desktop) {
+		margin-left: 280px;
+	}
+}
+
+.slide4-text {
+	float: left;
+	@include mq(tablet) {
+		width: auto;
+		margin-left: 46px;
+	}
+	@include mq(lapotop) {
+		margin-left: 142px;
+	}
+	@include mq(desktop) {
+		margin-left: 302px;
+	}
+}
+
+.slide5-text {
+	@include mq(desktop) {
+		margin-left: 128px;
+	}
+}
+
+.slide6-text {
+	@include mq(tablet) {
+		margin-left: 25px;
+	}
+	@include mq(laptop) {
+		margin-left: 121px;
+	}
+	@include mq(desktop) {
+		margin-left: 281px;
+	}
+}
+
+.slide7-text {
+	float: left;
+	@include mq(laptop) {
+		margin-left: 24px;
+	}
+	@include mq(desktop) {
+		margin-left: 184px;
+	}
+}
+
+.slide8-text {
+	float: left;
+	@include mq(laptop) {
+		margin-left: 51px;
+	}
+	@include mq(desktop) {
+		margin-left: 211px;
+	}
+}
+
+.slide9-text {
+	float: left;
+	@include mq(desktop) {
+		margin-left: 149px;
+	}
+}
+
+
+.packaging {
+	float: left;
+	width: 50%;
+	@include mq(tablet) {
+		width: 55%;
+	}
+}
+
+.slide10-text {
+	float: left;
+	width: 45%;
+	margin-top: 15%;
+	@include mq(tablet) {
+		width: auto;
+	}
+}
+
+.slide11-text {
+	float: left;
+	background: url(../img/about/text-slide11.jpg) no-repeat center center;
+	background-size: contain;
+	@include mq(tablet) {
+		background-size: cover;
+	}
+	@include mq(desktop) {
+		background-size: contain;
+	}
+}
+
+.slide12-text {
+	float: left;
+	@include mq(laptop) {
+		margin-left: 1px;
+	}
+	@include mq(desktop) {
+		margin-left: 161px;
+	}
+}
+
+.slide13-text {
+	float: left;
+	@include mq(laptop) {
+		margin-left: 31px;
+	}
+	@include mq(desktop) {
+		margin-left: 191px;
+	}
+}
+
+.slide14-text {
+	float: left;
+	background: url(../img/about/text-slide14.jpg) no-repeat center center;
+	background-size: contain;
+	@include mq(tablet) {
+		background-size: cover;
+	}
+	@include mq(desktop) {
+		background-size: contain;
+	}
+}
+
+.slide15-text {
+	float: left;
+	@include mq(laptop) {
+		margin-left: 95px;
+	}
+	@include mq(desktop) {
+		margin-left: 255px;
+	}
+}
+
+.slide16-text {
+	float: left;
+	background: url(../img/about/text-slide16.jpg) no-repeat center center;
+	background-size: contain;
+	@include mq(tablet) {
+		background-size: cover;
+	}
+	@include mq(desktop) {
+		background-size: contain;
+	}
+}
+
+.slide17-text {
+	float: left;
+	@include mq(android) {
+		margin-left: 48px;
+	}
+	@include mq(tablet) {
+		margin-left: 192px
+	}
+	@include mq(laptop) {
+		margin-left: 288px;
+	}
+	@include mq(desktop) {
+		margin-left: 448px;
+	}
+}
+
+.slide18-text {
+	float: left;
+	@include mq(laptop) {
+		margin-left: 55px;
+	}
+	@include mq(desktop) {
+		margin-left: 215px;
+	}
+}
+
+.slide19-text {
+	float: left;
+	@include mq(tablet) {
+		margin-left: 105px;
+	}
+	@include mq(laptop) {
+		margin-left: 201px;
+	}
+	@include mq(desktop) {
+		margin-left: 361px;
+	}
+}
+
+.slide20-text {
+	float: left;
+	@include mq(tablet) {
+		margin-left: 105px;
+	}
+	@include mq(laptop) {
+		margin-left: 201px;
+	}
+	@include mq(desktop) {
+		margin-left: 361px;
+	}
+}
+
+.slide21-text {
+	float: left;
+	@include mq(tablet) {
+		margin-left: 105px;
+	}
+	@include mq(laptop) {
+		margin-left: 201px;
+	}
+	@include mq(desktop) {
+		margin-left: 361px;
+	}
+}
+
+.slide22-text {
+	float: left;
+	background: url(../img/about/text-slide22.gif) no-repeat center center;
+	background-size: contain;
+	@include mq(tablet) {
+		background-size: cover;
+	}
+	@include mq(desktop) {
+		background-size: contain;
+	}
+}
+
+.slide23-text {
+	float: left;
+	background: url(../img/about/text-slide23.gif) no-repeat center center;
+	background-size: contain;
+	@include mq(tablet) {
+		background-size: cover;
+	}
+	@include mq(desktop) {
+		background-size: contain;
+	}
+}
+
+.slide24-text {
+	float: left;
+	background: url(../img/about/text-slide24.gif) no-repeat center center;
+	background-size: contain;
+	@include mq(tablet) {
+		background-size: cover;
+	}
+	@include mq(desktop) {
+		background-size: contain;
+	}
+}
+
+.slide25-text {
+	float: left;
+	cursor: pointer;
+	@include mq(laptop) {
+		margin-left: 52px;
+	}
+	@include mq(desktop) {
+		margin-left: 212px;
+	}
+}
+
+.slide26-text {
+	float: left;
+}
+
+.team {
+	float: left;
+	width: 100%;
+	.team-heading	{
+		float: left;
+		width: 100%;
+		display: none;
+		@include mq(tablet) {
+			width: 50%;
+			display: block;
+		}
+		img {
+			position: relative;
+			width: auto;
+			left: 50%;
+			margin-left: -122px;
+			margin-top: 10px;
+		}
+	}
+	.team-members {
+		float: left;
+		position: relative;
+		width: 240px;
+		left: 50%;
+		margin-left: -120px;
+		@include mq(tablet) {
+			width: 50%;
+			left: 0;
+			margin-left: 0;
+		}
+		.member	{
+			float: left;
+			width: 100%;
+			position: relative;
+			margin: 5px 0px;
+			@include mq(tablet) {
+				margin: 10px 0px;
+			}
+			span {
+				color: $light-green;
+				font-size: 1em;
+				line-height: 1em;
+				@include mq(tablet) {
+					font-size: 1.5em;
+				}
+				@include mq(laptop) {
+					font-size: 2em;
+				}
+			}
+			a {
+				font-size: 1em !important;
+				@include link($purple);
+				line-height: 1em;
+				margin-left: 20px;
+				@include mq(tablet) {
+					font-size: 1.5em !important;
+					margin-left: 40px;
+				}
+				@include mq(laptop) {
+					font-size: 2em !important;
+				}
+			}
+		}
+	}
+}
+
+.slide27-text {
+	float: left;
+	@include mq(laptop) {
+		margin-left: 82px;
+	}
+	@include mq(desktop) {
+		margin-left: 242px;
+	}
+}

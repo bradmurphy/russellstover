@@ -1,0 +1,278 @@
+.feature-product {
+	float: right;
+	background: $white url(../img/closed/Fall-Box.png) no-repeat;
+	background-position: 20% 425%;
+	position: relative;
+	width: 100%;
+	height: 380px;
+	padding: 10px 10px;
+	@include box-sizing(border-box);
+	@include mq(android) {
+		background-position: 180% 220%;
+		height: 360px;
+	}
+	@include mq(tablet) {
+		background-position: -280% 225%;
+		height: 384px;
+		width: 50%;
+	}
+	@include mq(laptop) {
+		background-position: 180% -100%;
+		height: 480px;
+	}
+	@include mq(desktop) {
+		background-position: 375% -450%;
+		background-size: 95%;
+		height: 640px;
+	}
+}
+
+.assorted-product {
+	float: right;
+	background: $white url(../img/closed/Variety-Box.png) no-repeat;
+	background-position: center center;
+	position: relative;
+	width: 100%;
+	height: 192px;
+	padding: 10px 10px;
+	@include box-sizing(border-box);
+	.assorted-hover {
+		background: rgba($teal, 0.80);
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		left: 0;
+		top: 0;
+		z-index: 1;
+		padding: 10px 10px;
+	  @include box-sizing(border-box);
+		@include transition(all .3s ease-in-out);
+		&:hover {
+			background: transparent;
+		}
+		&:hover > h6 {
+			@include transition(all .3s ease-in-out);
+			color: $crimson;
+		}
+		&:hover > p {
+			@include transition(all .3s ease-in-out);
+			color: $crimson;
+		}
+	}
+	@include mq(tablet) {
+		width: 25%;
+		height: 384px;
+	}
+	@include mq(laptop) {
+		height: 480px;
+	}
+	@include mq(desktop) {
+		height: 640px;
+	}
+}
+
+.flavor-product {
+	float: right;
+	position: relative;
+	width: 50%;
+	height: 165px;
+	padding: 10px 10px;
+	@include box-sizing(border-box);
+	&.coffee {
+		background: $white url(../img/closed/Coffee-Box.png) no-repeat;
+		background-size: 85%;
+		background-position: center center;
+		.coffee-hover {
+			background: rgba($maroon, 0.80);
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			left: 0;
+			top: 0;
+			z-index: 1;
+			padding: 10px 10px;
+		  @include box-sizing(border-box);
+			@include transition(all .3s ease-in-out);
+			&:hover {
+				background: transparent;
+			}
+			&:hover > h6 {
+				@include transition(all .3s ease-in-out);
+				color: $crimson;
+			}
+			&:hover > p {
+				@include transition(all .3s ease-in-out);
+				color: $crimson;
+			}
+		}
+	}
+	&.wine{
+		background: $white url(../img/closed/Wine-Box.png) no-repeat;
+		background-size: 85%;
+		background-position: center center;
+		.wine-hover {
+			background: rgba($maroon, 0.80);
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			left: 0;
+			top: 0;
+			z-index: 1;
+			padding: 10px 10px;
+		  @include box-sizing(border-box);
+			@include transition(all .3s ease-in-out);
+			&:hover {
+				background: transparent;
+			}
+			&:hover > h6 {
+				@include transition(all .3s ease-in-out);
+				color: $crimson;
+			}
+			&:hover > p {
+				@include transition(all .3s ease-in-out);
+				color: $crimson;
+			}
+		}
+	}
+	&.spicy {
+		background: $white url(../img/closed/Spicy-Box.png) no-repeat;
+		background-size: 85%;
+		background-position: center center;
+		.spicy-hover {
+			background: rgba($orange, 0.80);
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			left: 0;
+			top: 0;
+			z-index: 1;
+			padding: 10px 10px;
+		  @include box-sizing(border-box);
+			@include transition(all .3s ease-in-out);
+			&:hover {
+				background: transparent;
+			}
+			&:hover > h6 {
+				@include transition(all .3s ease-in-out);
+				color: $crimson;
+			}
+			&:hover > p {
+				@include transition(all .3s ease-in-out);
+				color: $crimson;
+			}
+		}
+	}
+	&.sweet {
+		background: $white url(../img/closed/Sweet-Box.png) no-repeat;
+		background-size: 85%;
+		background-position: center center;
+		.sweet-hover {
+			background: rgba($pink, 0.80);
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			left: 0;
+			top: 0;
+			z-index: 1;
+			padding: 10px 10px;
+		  @include box-sizing(border-box);
+			@include transition(all .3s ease-in-out);
+			&:hover {
+				background: transparent;
+			}
+			&:hover > h6 {
+				@include transition(all .3s ease-in-out);
+				color: $crimson;
+			}
+			&:hover > p {
+				@include transition(all .3s ease-in-out);
+				color: $crimson;
+			}
+		}
+	}
+	&.savory {
+		background: $white url(../img/closed/Savory-Box.png) no-repeat;
+		background-size: 85%;
+		background-position: center center;
+		.savory-hover {
+			background: rgba($purple, 0.80);
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			left: 0;
+			top: 0;
+			z-index: 1;
+			padding: 10px 10px;
+		  @include box-sizing(border-box);
+			@include transition(all .3s ease-in-out);
+			&:hover {
+				background: transparent;
+			}
+			&:hover > h6 {
+				@include transition(all .3s ease-in-out);
+				color: $crimson;
+			}
+			&:hover > p {
+				@include transition(all .3s ease-in-out);
+				color: $crimson;
+			}
+		}
+	}
+	&.salty {
+		background: $white url(../img/closed/Salty-Box.png) no-repeat;
+		background-size: 85%;
+		background-position: center center;
+		.salty-hover {
+			background: rgba($yellow, 0.80);
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			left: 0;
+			top: 0;
+			z-index: 1;
+			padding: 10px 10px;
+		  @include box-sizing(border-box);
+			@include transition(all .3s ease-in-out);
+			&:hover {
+				background: transparent;
+			}
+			&:hover > h6 {
+				@include transition(all .3s ease-in-out);
+				color: $crimson;
+			}
+			&:hover > p {
+				@include transition(all .3s ease-in-out);
+				color: $crimson;
+			}
+		}
+	}
+	@include mq(android) {
+		height: 192px;
+	}
+	@include mq(tablet) {
+		width: 25%;
+		&.slide {
+			width: 192px;
+		}
+	}
+	@include mq(laptop) {
+		padding: 20px 20px;
+		height: 240px;
+		&.slide {
+			width: 240px;
+		}
+	}
+	@include mq(desktop) {
+		height: 320px;
+		&.slide {
+			width: 320px;
+		}
+	}
+}
+
+.b-align {
+	position: absolute;
+	width: 85%;
+	bottom: 10px;
+}
+

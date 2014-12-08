@@ -1,0 +1,166 @@
+.results-height {
+	float: left;
+	width: 100%;
+	height: 850px;
+	min-height: 100%;
+	@include mq(tablet) {
+		height: 768px;
+		min-height: 100%;
+	}
+	@include mq(laptop) {
+		min-height: 100%;
+	}
+}
+
+
+.result {
+	overflow-x: hidden;
+	display: none;
+	&.savory {
+		background: $purple;
+	}
+	&.sweet {
+		background: $pink;
+	}
+	&.spicy {
+		background: $orange;
+	}
+	&.salty {
+		background: $yellow;
+	}
+	.heading {
+		background-size: 100%;
+		width: 100%;
+		height: 50%;
+		display: table;
+		&.savory {
+			background: url(../img/bg-savory.jpg);
+		}
+		&.sweet {
+			background: url(../img/bg-sweet.jpg);
+		}
+		&.spicy {
+			background: url(../img/bg-spicy.jpg);
+			@include mq(tablet) {
+				img {
+					top: 20%;
+				}
+			}
+		}
+		&.salty {
+			background: url(../img/bg-salty.jpg);
+			@include mq(tablet) {
+				background-size: 100%;
+				img {
+					top: 20%;
+				}
+			}
+		}
+		@include mq(tablet) {
+			height: 50%;
+			background-size: 25%;
+		}
+		img {
+			position: relative;
+			width: 50%;
+			left: 50%;
+			margin-left: -25%;
+			top: 45%;
+			@include mq(tablet) {
+				top: 35%;
+				left: -10px;
+				margin-left: 0;
+			}
+			@include mq(desktop) {
+				width: auto;
+			}
+		}
+	}
+	.content {
+		float: left;
+		position: relative;
+		width: 100%;
+		height: auto;
+		min-height: 50%;
+		@include mq(laptop) {
+			max-width: 960px;
+			margin-left: auto;
+			margin-right: auto;
+		}
+		@include mq(desktop) {
+			max-width: 1280px;
+		}
+		.left {
+			float: left;
+			width: 100%;
+			h1 {
+				text-align: center;
+				&.savory {
+					color: $puke;
+				}
+				&.sweet {
+					color: $sweet-text;
+				}
+				&.spicy {
+					color: $spicy-text;
+				}
+				&.salty {
+					color: $salty-text;
+				}
+				@include mq(tablet) {
+					font-size: 3em;
+					line-height: 1em;
+					text-align: left;
+					margin-top: 25px;
+					padding: 0 2.17706821480406%;
+				}
+				@include mq(laptop) {
+					font-size: 4em;
+				}
+				@include mq(desktop) {
+					font-size: 4.25em;
+				}
+			}
+			@include mq(tablet) {
+				width: 30%;
+			}
+		}
+		.right {
+			float: left;
+			width: 100%;
+			p {
+				width: 75%;
+				color: $white;
+				padding: 0 10px;
+				@include mq(tablet) {
+					font-size: 1.5em;
+				}
+				@include mq(laptop) {
+					font-size: 1.75em;
+				}
+			}
+			@include mq(tablet) {
+				width: 70%;
+			}
+		}
+	}
+}
+
+.v-align {
+	display: table-cell;
+	vertical-align: middle;
+}
+
+#no-result {
+	float: left;
+	width: 100%;
+	height: 100%;
+	background: $purple;
+	display: table;
+	h1 {
+		display: table-cell;
+		vertical-align: middle;
+		text-align: center;
+		color: $white;
+	}
+}

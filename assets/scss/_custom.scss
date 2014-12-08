@@ -1,0 +1,170 @@
+#chocolate-box {
+	position: relative;
+	width: auto;
+	margin: 0 auto;
+	max-width: 100%;
+	padding: 10px 10px;
+	@include box-sizing(border-box);
+	@include mq(tablet) {
+		width: 50%;
+		margin-top: 0;
+		margin-left: 0;
+	}
+	@include mq(desktop) {
+		margin-left: 5%;
+	}
+}
+
+.choc-container {
+	float: left;
+	position: relative;
+	width: 100%;
+	height: auto;
+	.slider {
+		width: 100%;
+	}
+	.slides {
+		float: left;
+		width: 100%;
+		height: auto;
+		@include mq(tablet) {
+			width: 960px;
+			overflow: hidden;
+		}
+		@include mq(laptop) {
+			width: 1200px;
+		}
+		@include mq(desktop) {
+			width: 1600px;
+		}
+	}
+	@include mq(tablet) {
+		height: 192px;
+		overflow: hidden;
+	}
+	@include mq(laptop) {
+		height: 240px;
+	}
+	@include mq(desktop) {
+		height: 320px;
+	}
+}
+
+.choc-box {
+	float: left;
+	background: $white;
+	width: 100%;
+	height: 384px;
+	@include box-sizing(border-box);
+	@include mq(tablet) {
+		width: 192px;
+		height: 192px;
+	}
+	@include mq(laptop) {
+		width: 240px;
+		height: 240px;
+	}
+	@include mq(desktop) {
+		width: 320px;
+		height: 320px;
+	}
+	.choc {
+		float: left;
+		background: url(../img/bg-chocolate.jpg) no-repeat center center;
+		border: solid 1px rgba($black, 0.75);
+		width: 50%;
+		height: 50%;
+		@include box-sizing(border-box);
+		@include transition(all .3s ease-in-out);
+		.hover {
+			cursor: pointer;
+			width: 100%;
+			height: 100%;
+			display: table;
+			text-align: center;
+			@include transition(all .3s ease-in-out);
+			&.purple {
+				background: rgba($purple, 0.75);
+			}
+			&.yellow {
+				background: rgba($yellow, 0.75);
+			}
+			&.pink {
+				background: rgba($pink, 0.75);
+			}
+			&.orange {
+				background: rgba($orange, 0.75);
+			}
+			&:hover {
+				background: transparent;
+			}
+			span {
+				vertical-align: middle;
+				display: table-cell;
+				color: $white;
+				font-weight: 500;
+				font-size: 1em;
+				line-height: 1.5em;
+				width: 115px;
+				text-transform: capitalize;
+				@include mq(tablet) {
+					line-height: 1em;
+					font-size: 1.15em;
+				}
+				@include mq(laptop) {
+					line-height: 1.5em;
+					padding: 0 20px;
+				}
+			}
+		}
+	}
+}
+
+.choc-arrows {
+	display: none;
+	@include mq(tablet) {
+		position: absolute;
+		display: block;
+		cursor: pointer;
+		margin-top: 556px;
+		width: 16px;
+		height: 40px;
+		z-index: 3;
+		@include transition(all .3s ease-in-out);
+		&:hover {
+			opacity: 0.75;
+		}
+	}
+	@include mq(laptop) {
+		margin-top: 693px;
+	}
+	@include mq(desktop) {
+		margin-top: 895px;
+	}
+}
+
+.choc-controls {
+	display: none;
+	@include mq(tablet) {
+		position: absolute;
+		width: 751px;
+		display: block;
+		z-index: 2;
+	}
+	@include mq(laptop) {
+		width: 960px;
+	}
+	@include mq(desktop) {
+		width: 1280px;
+	}
+}
+
+
+.choc-left {
+	left: 10px;
+	opacity: 0;
+}
+
+.choc-right {
+	right: 10px;
+}
